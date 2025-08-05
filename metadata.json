@@ -1,0 +1,5 @@
+{
+  "name": "ABN Red Flag Checker",
+  "description": "A professional web application for home loan underwriters to assess PAYG employer ABNs, identify potential red flags, and ensure compliance with ASIC and APRA regulations.",
+  "requestFramePermissions": []
+}
