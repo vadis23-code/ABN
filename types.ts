@@ -1,19 +1,31 @@
-export interface MockAbnDataType {
-  abn: string;
-  entityName: string;
-  status: string;
-  entityType: string;
-  gstRegistered: boolean;
-  businessLocation: string;
-  registrationDate: string;
-  industry: string;
+export type DeliveryMode = 'delivery' | 'pickup';
+
+export interface Product {
+  id: string;
+  name: string;
+  category: 'Batter' | 'Chutney' | 'Add-on';
+  price: number;
+  unit: string;
+  description: string;
+  ingredients: string;
+  shelfLife: string;
+  storage: string;
+  spiceLevel?: string;
+  allergens: string;
+  available: boolean;
+  maxDailyQty: number;
+  prepLeadTime: string;
 }
 
-export type RedFlagSeverity = 'Critical' | 'Caution';
-
-export interface RedFlag {
-  severity: RedFlagSeverity;
-  message: string;
+export interface CartItem {
+  productId: string;
+  quantity: number;
 }
 
-export type RiskLevel = 'Low' | 'Moderate' | 'High';
+export interface Coupon {
+  code: string;
+  description: string;
+  type: 'percent' | 'flat';
+  value: number;
+  maxDiscount?: number;
+}
